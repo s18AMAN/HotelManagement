@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+{%load static%}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+        <link type="text/css" rel="stylesheet" href="{% static 'css/style_reception.css' %}">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/eggplant/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        
+        <title>Welcome !!</title>
+        
+    </head>
+    
+    <body>
+        <div id="toggleBar">
+            <ul>
+                <li id="first"><a href="#intro">Jini Dost</a></li>
+                <li><a href="#hotel">Status</a></li>
+                <li><a href="#serve">Task</a></li>
+                <a href="/logout" class="btn btn-primary ml-2" style="float:right;">Logout</a>
+
+            </ul>
+            <div id="intro">
+                <h3>Welcome !!!</h3>
+                <p>We at Hotel Jini,</p>
+            </div>
+            <div id="hotel" class="hotel">
+                <h3>section 1</h3>
+                <div>
+                    <p>conent</p>
+                </div>  
+                <h2>Menue</h2>
+                <div>
+                <p>content2</p>
+                </div>                
+            </div>
+            <div id="serve">
+                <h4>Check OUT</h4>
+                <div>
+                    <p>We hope you had a pleasent stay at the hotel.Do rate and review us on Google. Because :</p><p>"Great hotels have always been social ideas, flawless mirrors to the particular societies they service."</p>
+                    <button id="chechOut">Check Out</button>
+                </div>        
+                <h4>Luggage Service</h4>
+                <div>
+                    <p>"We have a passion for luggage - trunks and so on. We have a collection of them and we deliver to you"</p>
+                    <form class="form-inline">
+                        <label for="lform">Room Number</label>
+                        <input id="lform" type="text" class="form-control">
+                        <button type="submit">Request Service</button>
+                    </form>
+                </div>
+                <h4>Room Service</h4>
+                <div>
+                    <p>"Your Comfort is our Pleasure !"</p>
+                    <form class="form-horizontal">
+                        <label for="#roomServe">Room Number :</label>
+                        <input id="roomServe" type="text" class="form-control">
+                        <br>
+                        <label for="#optionsServices">Service :</label>
+                        <select class="form-control" id="optionsServices">
+                            <option selected="true" disabled="disabled">Select Option</option>
+                            <option>Room Cleaning</option>
+                            <option>Electrician</option>
+                            <option>Plumber</option>
+                            <option>Snacks</option>
+                            <option>Laundary</option>
+                            <option>Atendee Female</option>
+                            <option>Attendee Male</option>
+                        </select>
+                    </form><br>
+                    <button>Request Service</button>
+                </div>
+
+            </div>
+            <div id="contact">
+                <h4 id="contactRequest">Contact Request</h4>
+                <form>
+                    <div class="form-inline form-group localAlign">
+                        <label for="#room">Room Number :</label>
+                    <input id="room" type="text" class="form-control">
+                    </div>
+                    <div class="form-inline form-group localAlign">
+                        <label for="#join">Date of Check IN : </label>
+                        <input id="join" class="form-control">
+                    </div>
+                    <div class="form-inline form-group localAlign">
+                        <label for="#leave">Date of Check OUT : </label>
+                        <input id="leave" class="form-control">
+                    </div>
+                    <div class="form-inline localAlign">
+                        <label>Phone-Number :</label>
+                        <input id="phNo" type="text" maxlength="10" class="form-control">
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        
+        
+        <script>
+            $(function(){
+                $("#toggleBar").tabs();
+                $("#hotel").accordion({
+                    heightStyle: "content",
+                    collapsible: true
+                });
+                $("#serve").accordion({
+                    heightStyle: "content",
+                    collapsible: true
+                });
+                $("#join").datepicker({
+                    showAnim: "drop",
+                    changeYear: true,
+                    numberOfMonths:1,
+                    changeMonth: true
+                });
+                $("#leave").datepicker({
+                    showAnim: "drop",
+                    changeYear: true,
+                    numberOfMonths:1,
+                    changeMonth: true
+                });
+            })
+        </script>
+    </body>
+</html>

@@ -1,0 +1,54 @@
+#toggleBar {
+    width: 100%
+}
+
+#first {
+    margin-left: 420px;
+}
+
+#intro {
+    text-align: center;
+}
+
+#lform {
+    width: 150px;
+    margin:0px 20px 0px 20px;
+}
+
+#optionsServices {
+    width: 300px
+}
+
+#roomServe {
+    width: 300px;
+}
+
+#contactRequest {
+    text-align: center
+}
+
+#room {
+    width: 300px;
+    margin-left: 60px;
+}
+
+#join {
+    width: 300px;
+    margin-left: 38px;
+}
+
+#leave {
+    width: 300px;
+    margin-left: 20px
+}
+
+#phNo {
+    width: 300px;
+    margin-left: 56px
+}
+
+
+
+.localAlign {
+    padding-left: 100px
+}
